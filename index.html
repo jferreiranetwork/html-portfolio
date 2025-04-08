@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Ferreira | Web Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans scroll-smooth">
+
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6" data-aos="fade-in">
+    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Foto de João Ferreira" class="w-32 h-32 rounded-full mb-6 shadow-lg" />
+    <h1 class="text-5xl md:text-7xl font-bold mb-4">João Ferreira</h1>
+    <p class="text-xl md:text-2xl text-gray-300 max-w-xl">Web Developer apaixonado por criar experiências digitais modernas e impactantes.</p>
+    <a href="#projetos" class="mt-8 px-6 py-3 bg-blue-500 rounded-full hover:bg-blue-600 transition">Ver Projetos</a>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section id="sobre" class="py-20 px-6 bg-gray-800" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">Sobre Mim</h2>
+      <p class="text-lg text-gray-300">
+        Sou um programador com paixão por tecnologia, sempre à procura de criar soluções web elegantes, rápidas e funcionais. Trabalho com front-end e back-end, focando em resultados reais e boa experiência do utilizador.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="py-20 px-6" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12">Competências</h2>
+      <div class="grid grid-cols-3 md:grid-cols-7 gap-7 justify-items-center text-center">
+        <div>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 mx-auto" />
+          <p class="mt-2 text-sm">HTML</p>
+        </div>
+        <div>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 mx-auto" />
+          <p class="mt-2 text-sm">CSS</p>
+        </div>
+        <div>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 mx-auto" />
+          <p class="mt-2 text-sm">JavaScript</p>
+        </div>
+        <div>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 mx-auto" />
+          <p class="mt-2 text-sm">React</p>
+        </div>
+        <div>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-12 mx-auto" />
+          <p class="mt-2 text-sm">Node.js</p>
+        </div>
+        <div>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 mx-auto" />
+          <p class="mt-2 text-sm">Git</p>
+        </div>
+        <div>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-12 mx-auto" />
+          <p class="mt-2 text-sm">PHP</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos" class="py-20 px-6 bg-gray-800" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-center">Projetos Recentes</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transition">
+          <h3 class="text-2xl font-semibold mb-2">Landing Page Animada</h3>
+          <p class="text-gray-400 mb-4">Página interativa com animações suaves usando Tailwind + Framer Motion.</p>
+          <a href="./landingpage.html" class="text-blue-400 hover:underline">Ver mais →</a>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transition">
+          <h3 class="text-2xl font-semibold mb-2">Dashboard de Analytics</h3>
+          <p class="text-gray-400 mb-4">Interface com gráficos dinâmicos e dados em tempo real.</p>
+          <a href="./dashboard.html" class="text-blue-400 hover:underline">Ver mais →</a>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-blue-500/50 transition">
+          <h3 class="text-2xl font-semibold mb-2">App de Tarefas</h3>
+          <p class="text-gray-400 mb-4">Gestor de tarefas full-stack com autenticação e base de dados.</p>
+          <a href="./apptask.html" class="text-blue-400 hover:underline">Ver mais →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-20 px-6" data-aos="fade-up">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">Vamos Trabalhar Juntos</h2>
+      <p class="text-gray-300 mb-8">Envie-me um e-mail e falamos sobre o seu projeto!</p>
+      <a href="mailto:joao@email.com" class="inline-block bg-blue-500 px-6 py-3 rounded-full hover:bg-blue-600 transition">Entrar em contacto</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 py-6 text-sm bg-gray-900">
+    © 2025 João Ferreira | Feito com 💙 e muito café.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 3000,
+      once: true
+    });
+  </script>
+</body>
+</html>

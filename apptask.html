@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App de Tarefas</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1a202c;
+      color: white;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Título -->
+  <div class="max-w-2xl mx-auto py-10 text-center">
+    <h1 class="text-4xl font-bold mb-4">Lista de Tarefas</h1>
+    <p class="text-lg mb-8">Adicione tarefas, marque-as como concluídas e remova-as quando necessário!</p>
+  </div>
+
+  <!-- Caixa de entrada e botão -->
+  <div class="max-w-2xl mx-auto mb-6 px-4">
+    <input id="taskInput" type="text" style="color: black;" class="w-full p-4 mb-4 text-xl rounded-lg" placeholder="Digite uma nova tarefa..." />
+    <button id="addTaskBtn" class="w-full bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600 transition">Adicionar Tarefa</button>
+  </div>
+
+  <!-- Lista de tarefas -->
+  <div id="taskList" class="max-w-2xl mx-auto px-4">
+    <!-- As tarefas serão inseridas aqui -->
+  </div>
+
+  <!-- Script -->
+  <script>
+    // Recuperar tarefas do localStorage
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+    // Referências
+    const taskInput = document.getElementById('taskInput');
+    const addTaskBtn = document.getElementById('addTaskBtn');
+    const taskList = document.getElementById('taskList');
+
+    // Função para atualizar a lista de tarefas
+    function updateTaskList() {
+      taskList.innerHTML = ''; // Limpar a lista
+      tasks.forEach((task, index) => {
+        const taskElement = document.createElement('div');
+        taskElement.classList.add('flex', 'items-center', 'justify-between', 'bg-gray-800', 'p-4', 'rounded-lg', 'mb-4');
+        taskElement.innerHTML = `
+          <span class="${task.completed ? 'completed' : ''}" onclick="toggleTask(${index})">${task.text}</span>
+          <button class="text-red-500 hover:text-red-700" onclick="removeTask(${index})">Remover</button>
+        `;
+        taskList.appendChild(taskElement);
+      });
+    }
+
+    // Adicionar tarefa
+    function addTask() {
+      const taskText = taskInput.value.trim();
+      if (taskText !== '') {
+        tasks.push({ text: taskText, completed: false });
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        taskInput.value = '';
+        updateTaskList();
+      }
+    }
+
+    // Alternar status da tarefa
+    function toggleTask(index) {
+      tasks[index].completed = !tasks[index].completed;
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+      updateTaskList();
+    }
+
+    // Remover tarefa
+    function removeTask(index) {
+      tasks.splice(index, 1);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+      updateTaskList();
+    }
+
+    // Evento de clique para adicionar tarefa
+    addTaskBtn.addEventListener('click', addTask);
+
+    // Evento de pressionamento de tecla para adicionar tarefa (Enter)
+    taskInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        addTask();
+      }
+    });
+
+    // Atualizar a lista ao carregar a página
+    updateTaskList();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page Animada</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1a202c;
+    }
+    .hero-section {
+      background-image: url('https://via.placeholder.com/1500');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Hero Section -->
+  <section class="hero-section flex items-center justify-center text-center text-white" data-aos="fade-in">
+    <div class="p-8 bg-black bg-opacity-50 rounded-lg">
+      <h1 class="text-5xl font-bold mb-6">Transforme Seu Mundo Digital</h1>
+      <p class="text-lg mb-8">Solucione problemas com design moderno e interatividade de ponta.</p>
+      <a href="#services" class="inline-block px-6 py-3 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition">Saiba Mais</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-6 bg-gray-800 text-white" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12">Nossos Serviços</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Web Design</h3>
+          <p>Criação de sites responsivos e modernos, focados na experiência do usuário.</p>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Desenvolvimento Web</h3>
+          <p>Desenvolvimento de sistemas completos com front-end e back-end.</p>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Consultoria</h3>
+          <p>Ajudamos a melhorar sua presença online com estratégias eficazes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 py-6 bg-gray-900">
+    © 2025 Sua Empresa | Feito com 💙 e criatividade.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
